@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: color var(--theme-change-time), background-color var(--theme-change-time);
+}
+
+:root {
+  --border-radius: 10px;
+  --theme-change-time: 0.3s;
+  --title-font-size: 28px;
+  --element-transition-time: 0.18s;
+}
+
+:root[data-theme='dark'] {
+  --background-color: black;
+  --element-background-color: rgb(28, 28, 30);
+  --need-proxy-outline: rgb(255, 192, 192);
+  --font-color: white;
+}
+
+:root[data-theme='light'] {
+  --background-color: rgb(245, 245, 247);
+  --element-background-color: white;
+  --need-proxy-outline: rgb(255, 64, 64);
+  --font-color: black;
+
+}
+
+html {
+  background-color: var(--background-color);
+}
+
+.container {
+  max-width: 1024px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* el链接和按钮  */
+.el-link,
+.el-button {
+  color: var(--font-color);
+  background-color: var(--element-background-color);
+}
+
+/* ElLoading背景样式 */
+.loadingBackground {
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.el-popover.el-popper {
+  border-radius: var(--border-radius);
+}
+
+/* ElDrawer */
+.el-drawer__title {
+  color: var(--font-color);
+  font-size: var(--title-font-size);
+  font-weight: bolder;
+}
+
+.el-icon {
+  color: var(--font-color);
+}
